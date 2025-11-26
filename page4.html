@@ -13,9 +13,7 @@
       margin: 2rem auto;
       border-radius: 8px;
     }
-    body {
-      text-align: center;
-    }
+    body { text-align: center; }
     button {
       margin-top: 1rem;
       padding: 0.6rem 1rem;
@@ -52,7 +50,7 @@
 
 <script>
   function initMap() {
-    const myLocation = { lat: 41.834873, lng: -87.627009 }; // Example coordinates
+    const myLocation = { lat: 41.834873, lng: -87.627009 };
     const map = new google.maps.Map(document.getElementById("map"), {
       zoom: 14,
       center: myLocation,
@@ -62,7 +60,6 @@
       map: map,
       title: "My Location"
     });
-    // Additional features
     const infoWindow = new google.maps.InfoWindow({
       content: "<p>Welcome to my map!</p>"
     });
