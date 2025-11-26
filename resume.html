@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume - London Strain</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9fb;
+      color: #222;
+      text-align: center;
+    }
+    header {
+      background: #000;
+      color: white;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      margin: 0 0 1rem 0;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .image-gallery img {
+      width: calc(33% - 0.66rem);
+      border-radius: 8px;
+      object-fit: cover;
+    }
+    audio, video {
+      width: 80%;
+      margin-top: 1rem;
+      border-radius: 6px;
+    }
+    button {
+      margin-top: 1rem;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      background: white;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 2rem;
+    }
+    @media (max-width: 900px) {
+      .image-gallery img {
+        width: 45%;
+      }
+    }
+    @media (max-width: 600px) {
+      .image-gallery img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>London Strain</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="page3.html">Personal</a></li>
+      <li><a href="page4.html">Map</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Resume</h2>
+  <p>Here is an overview of my career, skills, and accomplishments.</p>
+
+  <div class="image-gallery">
+    <img src="images/career1.jpg" alt="Career Image 1">
+    <img src="images/career2.jpg" alt="Career Image 2">
+    <img src="images/career3.jpg" alt="Career Image 3">
+  </div>
+
+  <video controls>
+    <source src="media/career_video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <button id="questions-btn">Questions</button>
+</div>
+
+<footer>
+  <p>&copy; 2025 London Strain</p>
+</footer>
+
+</body>
+</html>

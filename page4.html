@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map - London Strain</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+  <style>
+    #map {
+      height: 500px;
+      width: 80%;
+      margin: 2rem auto;
+      border-radius: 8px;
+    }
+    body { text-align: center; }
+    button {
+      margin-top: 1rem;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      background: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>London Strain</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="page3.html">Personal</a></li>
+      <li><a href="page4.html">Map</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>My Location Map</h2>
+  <div id="map"></div>
+  <button id="questions-btn">Questions</button>
+</div>
+
+<footer>
+  <p>&copy; 2025 London Strain</p>
+</footer>
+
+<script>
+  function initMap() {
+    const myLocation = { lat: 41.834873, lng: -87.627009 };
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 14,
+      center: myLocation,
+    });
+    const marker = new google.maps.Marker({
+      position: myLocation,
+      map: map,
+      title: "My Location"
+    });
+    const infoWindow = new google.maps.InfoWindow({
+      content: "<p>Welcome to my map!</p>"
+    });
+    marker.addListener("click", () => infoWindow.open(map, marker));
+  }
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM1F-BpX660SBK3-Vw9O9f7AEvTAIH8rI&callback=initMap"></script>
+
+</body>
+</html>
